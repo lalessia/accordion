@@ -28,12 +28,6 @@ span{
     grid-column-gap: $column-gap;
 }
 
-
-.content .innerContent{
-    margin-top: $general-padding;
-    margin-bottom: $general-padding;
-}
-
 .generalBox{
     background-color: $box-background-color;
     padding-left: $general-padding;
@@ -105,12 +99,17 @@ span{
 }
 
 .content{
-    padding-right: 25px;
+    padding-right: $general-padding;
     font-size: $content-size;
     color: $global-color;
     overflow: hidden;
     max-height: 0;
     transition: max-height 1.0s ease-out;
+    & .innerContent{
+        margin-top: $general-padding;
+        margin-bottom: $general-padding;
+    }
+
 }
 
 .slideDown{

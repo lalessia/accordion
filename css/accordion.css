@@ -6,10 +6,6 @@ span {
   padding: 0px 25px;
   grid-column-gap: 30px; }
 
-.content .innerContent {
-  margin-top: 25px;
-  margin-bottom: 25px; }
-
 .generalBox {
   background-color: #fff;
   padding-left: 25px;
@@ -77,6 +73,9 @@ span {
   overflow: hidden;
   max-height: 0;
   transition: max-height 1.0s ease-out; }
+  .content .innerContent {
+    margin-top: 25px;
+    margin-bottom: 25px; }
 
 .slideDown {
   overflow: hidden;
