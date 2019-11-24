@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Accordition demo page</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="css/accordion.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script type="text/javascript" src="js/accordion.js"></script>
+    </head>
+    <body>
+        <h1>Accordion demo page</h1>
+        <div id="my-accordion">
+        </div>
+
+        <script type="text/javascript">
+            var options = {
+                container: 'my-accordion',
+                mainTitle: 'Main accordion Title',
+                panels: [{
+                    title: 'My profile',
+                    subtitle: 'Update your profile information',
+                    content: '<div class="innerContent"><form><input type="text" placeholder="Name"><br><br><input type="email" placeholder="Email"><br><br><input type="text" placeholder="Phone"><br><br><input type="text" placeholder="Address"><br><br><input type="submit" value="Submit"></form></div>'
+                },{
+                    title: 'Change password',
+                    subtitle: 'Change your login password',
+                    content: '<div class="innerContent"><form><input type="password" placeholder="Old Password"><br><br><input type="password" placeholder="New Password"><br><br><input type="password" placeholder="Confirm Password"><br><br><input type="submit" value="Submit"></form></div>'
+                },{
+                    title: 'Preferences',
+                    subtitle: 'Set your language and timezone preferences',
+                    content: '<div class="innerContent"><p><label>Set your language: </label><select><option value="it">Italiano</option><option value="en">Inglese</option><option value="fr">Francese</option><option value="es">Spagnolo</option></select><br><br><label> Set time zone: </label><select><option>GMT</option><option>CET</option><option>EST</option></select></p></div>'
+                },{
+                    title: 'Very long subtitle',
+                    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+                    content: '<div class="innerContent"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>'
+                },{
+                    title: 'No description title',
+                    content: '<div class="innerContent"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>'
+                }]
+            };
+            var accordion = new Accordion(options);
+        </script>
+    </body>
+</html>

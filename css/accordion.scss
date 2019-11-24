@@ -1,0 +1,148 @@
+//colors
+$global-color: #333;
+$item-title-color: #0465ac;
+$item-desc-color: #999;
+$box-background-color: #fff;
+$divider-color: #e4e6e5;
+
+//size
+$global-size: 18px;
+$item-title-close-size: 14px;
+$item-desc-size: 12px;
+$content-size: 13px;
+$general-padding: 25px;
+$column-gap: 30px;
+$column-main-title-box-height: 60px;
+$size-height-row-with-subtitle: 70px;
+$size-height-row-without-subtitle: 50px;
+$margin-openPannel: 30px;
+$icon-font-size: 26px;
+
+span{
+    cursor: pointer;
+}
+
+#my-accordion{
+    display: grid;
+    padding: 0px $general-padding;
+    grid-column-gap: $column-gap;
+}
+
+
+.content .innerContent{
+    margin-top: $general-padding;
+    margin-bottom: $general-padding;
+}
+
+.generalBox{
+    background-color: $box-background-color;
+    padding-left: $general-padding;
+    border: solid 1px $divider-color;
+    color: $global-color;
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.2);
+}
+.mainTitleBox{
+    height: $column-main-title-box-height;
+    font-size: $global-size;
+    color: $global-color;
+}
+
+.titleSection{
+    width: 93%;
+}
+
+.title-text{
+    font-size: $item-title-close-size;
+    color: $item-title-color;
+    font-weight: 600;
+}
+
+.subtitle-text{
+    font-size: $item-desc-size;
+    color: $item-desc-color;
+    font-weight: 600;
+    margin-top: $item-desc-size;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 90%;
+    overflow: hidden;
+}
+
+.arrowSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: $general-padding;
+    margin-right: $general-padding;
+}
+
+.arrow{
+    color: $item-title-color;
+    font-size: $icon-font-size;
+}
+
+.boxWithSubtitle{
+    display: flex;
+    flex-direction: row;
+    height: $size-height-row-with-subtitle;
+    font-size: $item-title-close-size;
+}
+
+.boxWithoutSubtitle{
+    display: flex;
+    flex-direction: row;
+    height: $size-height-row-without-subtitle;
+    font-size: $item-title-close-size;
+}
+
+.openPanel{
+    margin-bottom: $margin-openPannel;
+    margin-top: $margin-openPannel;
+}
+
+.openTitle{
+    font-size: $global-size;
+}
+
+.content{
+    padding-right: 25px;
+    font-size: $content-size;
+    color: $global-color;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 1.0s ease-out;
+}
+
+.slideDown{
+    overflow: hidden;
+    height: auto;
+    max-height: 600px;
+}
+
+@media (min-width: 840px){
+    #my-accordion{
+        grid-template-columns: repeat(8, 1fr);
+    }
+    .generalBox{
+        grid-column-start: 1;
+        grid-column-end: 9;
+    }
+}
+@media (min-width: 1280px){
+    #my-accordion{
+        grid-template-columns: repeat(12, 1fr);
+    }
+    .generalBox{
+        grid-column-start: 1;
+        grid-column-end: 13;
+    }
+}
+@media (min-width: 1366px){
+    #my-accordion{
+        grid-template-columns: repeat(12, 1fr);
+    }
+    .generalBox{
+        grid-column-start: 1;
+        grid-column-end: 13;
+    }
+}
